@@ -1,16 +1,26 @@
 <%- include partials/header.ejs %>
+<%- include partials/top_nav.ejs %>
+<!DOCTYPE html>
+<html>
+ <head>
+   <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css">
+   <link rel='stylesheet' href="/@fortawesome/fortawesome-free/css/all.min.css">
+   <link rel='stylesheet' href='/Content/app.css' />
+ </head>
+ <body>
+   <section id="about">
+     <div class="container mt-4 pt-4">
+         <h1 class="text-center">About Me</h1>
+         <div class="row mt-4">
+             <div class="col-lg-4">
+                 <img src="/public/Black & White Minimalist Business Logo (3).png" class="TeamLogo" width="200" height="250">
+             
 
-<%- include partials/main_nav.ejs %>
-  
-
-  <!-- Main Content -->
-  <main class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">Welcome To<%= title %> Landing page</h1>
-      
-    </div>
-  </main>
-  
-<%- include partials/bottom_nav.ejs %>  
-
+                 </div>
+                 <a href="game.ejs" target="_blank">Create Survey</a></p>
+             </div>
+ </section>
+ </body>
+</html>
+<%- include partials/bottom_nav.ejs %>
 <%- include partials/footer.ejs %>
