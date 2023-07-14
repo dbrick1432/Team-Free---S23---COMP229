@@ -17,4 +17,9 @@ router.get('/', async (req, res, next)=>{
     }
 });
 
+//Get route for create survey pages
+router.get('/create', async (req, res, next)=>{
+    res.render('createGame', {title: 'Create Survey'});
+});
+
 module.exports = router;
