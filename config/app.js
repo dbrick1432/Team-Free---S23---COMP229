@@ -10,10 +10,10 @@ let DB = require('./db');
 
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
-let gamesRouter = require('../routes/game');
+let gamesRouter = require('../routes/survey');
 
 // point mongoose to the DB URI
-mongoose.connect(DB.URI);
+// mongoose.connect(DB.URI); comment out db connect for now since it is not set up
 
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, '../node_modules')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/game-list', gamesRouter);
+app.use('/game', gamesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
