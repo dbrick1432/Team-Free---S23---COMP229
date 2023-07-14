@@ -1,4 +1,4 @@
 module.exports =
 {
-    "URI": "mongodb://localhost/game_store"
+    "URI": "mongodb+srv://dbricke1:mRRehM5DZJcS5UJT@groupproject.mnuhnrb.mongodb.net/?retryWrites=true&w=majority"
 }
