@@ -22,27 +22,13 @@ router.get('/list', function(req, res, next) {
 });
 
 /* GET home page. */
-router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services' });
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'Login Page' });
 });
 
 /* GET home page. */
-router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact Us' });
+router.get('/register', function(req, res, next) {
+  res.render('register', { title: 'Register' });
 });
-/* Get Route for displaying the Login Page */
-router.get('/login', indexController.displayLoginPage);
-
-/* Post Route for processing the Login Page */
-router.post('/login', indexController.processLoginPage);
-
-/* Get Route for displaying the Register Page */
-router.get('/register', indexController.displayRegisterPage);
-
-/* Get Route for processing the Register Page */
-router.post('/register', indexController.processRegisterPage);
-
-/* Get to perform UserLogout */
-router.get('/logout', indexController.performLogout);
 
 module.exports = router;
