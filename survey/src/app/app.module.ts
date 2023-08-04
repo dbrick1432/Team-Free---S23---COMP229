@@ -15,6 +15,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { SurveyCreateComponent } from './survey-create/survey-create.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { SurveyCreateComponent } from './survey-create/survey-create.component';
     NavComponent,
     HomeComponent,
     SurveyListComponent,
-    SurveyCreateComponent
+    SurveyCreateComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,8 @@ import { SurveyCreateComponent } from './survey-create/survey-create.component';
     MatCardModule,
     MatMenuModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

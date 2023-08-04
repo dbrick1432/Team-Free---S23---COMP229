@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faHouseLaptop, faUser, faSignInAlt, faSignOutAlt, faTableList} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
+  faHouseLaptop = faHouseLaptop;
+  faUser = faUser;
+  faSignInAlt = faSignInAlt;
+  faSignOutAlt = faSignOutAlt;
+  faTableList = faTableList;
 }
