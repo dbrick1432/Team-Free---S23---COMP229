@@ -11,8 +11,8 @@ const routes: Routes = [
   {path:'', component:HomeComponent},
   {path:'survey', component:SurveyListComponent},
   {path:'survey/create', component:SurveyCreateComponent},
-  {path:'login', component:LoginComponent},
-  {path:'register', component:RegisterComponent}
+  {path:'useres/login', component:LoginComponent},
+  {path:'useres/register', component:RegisterComponent}
 ];
 
 @NgModule({
