@@ -25,14 +25,4 @@ router.get('/list', function(req, res, next) {
   res.render('list', { title: 'List of Surveys' });
 });
 
-/* GET home page. */
-router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Login Page' });
-});
-
-/* GET home page. */
-router.get('/register', function(req, res, next) {
-  res.render('register', { title: 'Register' });
-});
-
 module.exports = router;

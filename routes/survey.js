@@ -37,7 +37,7 @@ router.get('/', async (req, res, next)=>{
 });
 
 //Get route for create survey pages
-router.get('/create', async (req, res, next)=>{
+router.get('/create', (req, res, next)=>{
     res.render('createSurvey', {title: 'Create Survey'});
 });
 
