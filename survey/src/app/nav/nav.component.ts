@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AppService } from '../app.service';
 import { faHouseLaptop, faUser, faSignInAlt, faSignOutAlt, faTableList} from '@fortawesome/free-solid-svg-icons';
 
@@ -14,14 +14,5 @@ export class NavComponent {
   faSignOutAlt = faSignOutAlt;
   faTableList = faTableList;
 
-  isAuth :any;
-
-  constructor (public appService:AppService){}
-
-  ngOnInit(){
-    this.appService.getLoginStatus().subscribe({
-      next: res => this.isAuth = res,
-      error: e => console.log("error")
-    })
-  }
+  @Input() isAuth :any;
 }
