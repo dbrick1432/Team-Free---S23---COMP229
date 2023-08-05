@@ -40,4 +40,18 @@ router.post('/Login', (req, res, next) => {
   */
 });
 
+router.post('/register', (req, res, next) => {
+  // temp code, connect to db and rewrite later
+  if (req.body.userInfo.userName == "admin") {
+    res.json({err:"user exist"})
+  } else if(req.body.userInfo.userName && req.body.userInfo.password && req.body.userInfo.email && req.body.userInfo.displayName){
+    res.json({login: "success"})
+  } else {
+    res.json({err:"please fill in all field"})
+  }
+  /*
+  passport.authenticate('local',(err, user, info) => {})(req, res, next)
+  */
+});
+
 module.exports = router;

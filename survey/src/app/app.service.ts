@@ -24,4 +24,15 @@ export class AppService {
       return true;
     }));
   }
+
+  register(userInfo : object): Observable<boolean>{
+    return this.http.post('http://localhost:3000/users/register',{userInfo}).pipe(map(data => {
+      let res :any = data;
+      if (res.err) {
+        return false;
+      }
+      this.route.navigate(['users/login']);
+      return true;
+    }));
+  }
 }
