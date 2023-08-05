@@ -8,7 +8,7 @@ export class AuthService {
 
   constructor(private http : HttpClient) { }
 
-  public isAuthenticated() : Boolean {
+  public isAuth() : Boolean {
     return true;
   }
 }
