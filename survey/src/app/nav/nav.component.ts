@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { AppService } from '../app.service';
 import { faHouseLaptop, faUser, faSignInAlt, faSignOutAlt, faTableList} from '@fortawesome/free-solid-svg-icons';
 
 @Component({

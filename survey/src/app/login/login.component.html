@@ -1,7 +1,8 @@
 <div class="row">
     <div class="offset-md-4 col-md-4">
         <h1>Please Login</h1>
-        <form [formGroup] = "loginForm" method="POST" autocomplete="off">
+        <p *ngIf="!success" style = "color:red; font-weight: 700;">Combination of username and password does not exist</p>
+        <form [formGroup] = "loginForm" (ngSubmit)="onSubmit(); loginForm.reset()">
             <fieldset class="form-group">
                 <label for="username">Username: </label>
                 <input formControlName = "userName" type="text" class="form-control"
