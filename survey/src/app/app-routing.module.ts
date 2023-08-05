@@ -5,13 +5,15 @@ import { SurveyListComponent } from './survey-list/survey-list.component';
 import { SurveyCreateComponent } from './survey-create/survey-create.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthGuardService } from './auth-guard.service';
+import { AuthGuardLoginService } from './auth-guard-login.service';
 
 const routes: Routes = [
-  {path:'home', component:HomeComponent},
+  {path:'home', component:HomeComponent, },
   {path:'', component:HomeComponent},
   {path:'survey', component:SurveyListComponent},
-  {path:'survey/create', component:SurveyCreateComponent},
-  {path:'useres/login', component:LoginComponent},
+  {path:'survey/create', component:SurveyCreateComponent, canActivate : [AuthGuardService]},
+  {path:'useres/login', component:LoginComponent, canActivate : [AuthGuardLoginService]},
   {path:'useres/register', component:RegisterComponent}
 ];
 

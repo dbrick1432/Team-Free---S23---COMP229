@@ -16,7 +16,7 @@
           <a class="nav-link" href="/survey"><fa-icon [icon]="faTableList"></fa-icon> List of Surveys </a>
         </li>
         <li *ngIf="!isAuth" class="nav-item"><a href="/useres/login" class="nav-link">
-          <fa-icon [icon]="faSignInAlt"></fa-icon> {{isAuth}}Login</a>
+          <fa-icon [icon]="faSignInAlt"></fa-icon> Login</a>
         </li>
         <li *ngIf="isAuth"><a href="/useres/logout" class="nav-link">
           <fa-icon [icon]="faSignOutAlt"></fa-icon> Logout</a>
