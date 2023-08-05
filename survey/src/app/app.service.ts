@@ -11,8 +11,4 @@ export class AppService {
   getSurveys(){
     return this.http.get('http://localhost:3000/survey');
   }
-
-  getLoginStatus(){
-    return this.http.get('http://localhost:3000/users/status');
-  }
 }

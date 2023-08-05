@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AppService } from './app.service';
+
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,10 @@ export class AppComponent {
   title = 'survey';
   isAuth : any;
 
-  constructor (public appService:AppService){}
+  constructor (public authService:AuthService){}
 
   ngOnInit(){
-    this.appService.getLoginStatus().subscribe({
+    this.authService.getLoginStatus().subscribe({
       next: res => this.isAuth = res,
       error: e => console.log("error")
     })
