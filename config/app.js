@@ -17,7 +17,7 @@ let usersRouter = require('../routes/users');
 let surveyRouter = require('../routes/survey');
 
 // point mongoose to the DB URI
-// mongoose.connect(DB.URI); comment out db connect for now since it is not set up
+mongoose.connect(DB.URI); 
 
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error:'));

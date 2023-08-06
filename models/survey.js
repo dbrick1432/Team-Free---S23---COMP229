@@ -7,7 +7,7 @@ let gameModel = mongoose.Schema({
     answer: String
 },
 {
-    collection: 'games'
+    collection: 'survey'
 });
 
 module.exports = mongoose.model('Game', gameModel);
