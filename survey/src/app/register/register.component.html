@@ -1,7 +1,7 @@
 <div class="row">
     <div class="offset-md-4 col-md-4">
         <h1>Please Register</h1>
-        <p *ngIf="!success" style = "color:red; font-weight: 700;">User already exist / field is blank</p>
+        <p *ngIf="success" style = "color:red; font-weight: 700;">{{success}}</p>
         <form [formGroup] = "registerForm" (ngSubmit)="onSubmit()" autocomplete="off">
             <fieldset class="form-group">
                 <label for="username">Username: </label>

@@ -39,7 +39,7 @@ router.post('/Login', (req, res, next) => {
   passport.authenticate('local',(err, user, info) => {})(req, res, next)
   */
 });
-
+/*
 router.post('/register', (req, res, next) => {
   // temp code, connect to db and rewrite later
   if (req.body.userInfo.userName == "admin") {
@@ -49,9 +49,36 @@ router.post('/register', (req, res, next) => {
   } else {
     res.json({err:"please fill in all field"})
   }
-  /*
+  
   passport.authenticate('local',(err, user, info) => {})(req, res, next)
-  */
+  
 });
+*/
+router.post('/register', (req, res, next) => {
+
+  //let insert = User.create({'username': req.body.userInfo.userName, 'password': req.body.userInfo.password, 'email' : req.body.userInfo.email, 'displayName': req.body.userInfo.displayName})
+  User.find({'username': req.body.userInfo.userName})
+  .then(function(data) {
+    if(data.length == 0){
+      return User.find({'email' : req.body.userInfo.email})
+    } else {
+      res.json({err : 'user exist'})
+      throw 'The user already exists.'
+    }
+  })
+  .then(function(data) {
+    if(data.length == 0){
+      return User.create({'username': req.body.userInfo.userName, 'password': req.body.userInfo.password, 'email' : req.body.userInfo.email, 'displayName': req.body.userInfo.displayName})
+    } else {
+      res.json({err : 'email registered'})
+      throw 'The email already exists.'
+    }
+  }).then(function(data){
+    console.log(data)
+    res.json({success : 'registered!'})
+  })
+  .catch((e) => console.error(e))
+})
+
 
 module.exports = router;

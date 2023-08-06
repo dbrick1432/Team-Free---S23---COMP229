@@ -17,12 +17,12 @@ export class RegisterComponent {
     displayName: new FormControl('')
   });
 
-  success : any = "_";
+  success : any = "";
 
   async onSubmit() {
     this.appService.register(this.registerForm.value).subscribe(res => {
-      if (res == false){
-        this.success = false
+      if (res.err){
+        this.success = res.err
       }
     });
   }
