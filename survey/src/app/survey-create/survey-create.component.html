@@ -1,0 +1,40 @@
+
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1>Create Survey</h1>
+            <br>
+            <form action="/game/create" method="POST" >
+                <table class="table table-bordered table-striped table-hover">
+                    <!-- Header Row -->
+                    <tr class="d-flex">
+                        <th class="text-center col-1">Q#</th>
+                        <th class="text-center col-7">Question</th>
+                        <th class="text-center col-4">Answer</th>
+                    </tr>
+                    <tr class="d-flex">
+                        <td class="text-center col-1">1</td>
+                        <td class="text-center col-7">
+                            <input type="text" name="q1" required>
+                        </td>
+                       <!---- <td class="text-center col-4">
+                            <input type="text" name="a1" required>
+                        </td>-->
+                        
+                            <td>
+                            
+                         <input name="opthelp" tabindex="11" type="radio" value="Excellent">Excellent
+                         <input name="opthelp" tabindex="13" type="radio" value="Good">Good
+                         <input name="opthelp" tabindex="15" type="radio" value="Fair">Fair
+                         <input name="opthelp" tabindex="11" type="radio" value="Poor">Poor</td>
+                        
+                    </tr>
+                    
+                </table>
+                
+                <button id="more-question" class="btn btn-outline-success" type="button">add question</button>
+                <button class="btn btn-outline-danger" type="button">remove question</button><br>
+                <button class="btn btn-outline-primary" type="submit">submit</button>
+            </form>
+            <p id="question_counter" style="visibility: hidden;"> 1 </p>
+        </div>
+    </div>

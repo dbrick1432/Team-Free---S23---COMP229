@@ -1,15 +1,13 @@
 let mongoose = require('mongoose');
 
 // create a model class
-let gameModel = mongoose.Schema({
-    name: String,
-    developer: String,
-    released: String,
-    description: String,
-    price: Number
+let surveyModel = mongoose.Schema({
+    qid: String,
+    question: String,
+    answer: String
 },
 {
-    collection: 'games'
+    collection: 'survey'
 });
 
-module.exports = mongoose.model('Game', gameModel);
+module.exports = mongoose.model('survey', surveyModel);

@@ -3,6 +3,10 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+let cors = require('cors');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy
+const session = require('express-session');
 
 // database setup
 let mongoose = require('mongoose');
@@ -13,7 +17,7 @@ let usersRouter = require('../routes/users');
 let surveyRouter = require('../routes/survey');
 
 // point mongoose to the DB URI
-// mongoose.connect(DB.URI); comment out db connect for now since it is not set up
+mongoose.connect(DB.URI); 
 
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
@@ -34,6 +38,24 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 
+app.use(session({
+  secret : "SomeSecret",
+  saveUninitialized: false,
+  resave: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+let userModel = require('../models/user');
+let User = userModel.User
+
+passport.use(User.createStrategy());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/survey', surveyRouter);

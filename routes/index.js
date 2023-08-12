@@ -3,6 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  let jsonRes = {
+    
+  }
+  //res.json();
   res.render('index', { title: 'Team Free' });
 });
 
@@ -19,16 +23,6 @@ router.get('/about', function(req, res, next) {
 /* GET home page. */
 router.get('/list', function(req, res, next) {
   res.render('list', { title: 'List of Surveys' });
-});
-
-/* GET home page. */
-router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services' });
-});
-
-/* GET home page. */
-router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact Us' });
 });
 
 module.exports = router;
