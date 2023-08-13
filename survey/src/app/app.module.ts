@@ -19,6 +19,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SurveyIdComponent } from './survey-id/survey-id.component';
+import { QuestionMcComponent } from './question-mc/question-mc.component';
+import { QuestionTfComponent } from './question-tf/question-tf.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     SurveyListComponent,
     SurveyCreateComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SurveyIdComponent,
+    QuestionMcComponent,
+    QuestionTfComponent
   ],
   imports: [
     BrowserModule,
