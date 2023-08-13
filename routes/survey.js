@@ -20,15 +20,6 @@ function requireAuth(req, res, next)
 router.get('/', async (req, res, next)=>{
     try {
         let surveyList = await Survey.find();
-        //console.log(surveyList);
-        /*
-        testjson = [
-            { title: 'Card 1', cols: 1, rows: 1 },
-            { title: 'Card 2', cols: 1, rows: 1 },
-            { title: 'Card 3', cols: 1, rows: 1 },
-            { title: 'Card 4', cols: 1, rows: 1 }
-          ];
-        */
         res.json(surveyList)
         //res.render('survey', {title: 'Survey List', SurveyList: surveyList})
     } catch (err){

@@ -5,7 +5,9 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let cors = require('cors');
 const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy
+const JwtStrategy = require('passport-jwt').Strategy,
+    ExtractJwt = require('passport-jwt').ExtractJwt;
+//const LocalStrategy = require('passport-local').Strategy
 const session = require('express-session');
 
 // database setup

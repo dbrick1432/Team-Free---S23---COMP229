@@ -12,8 +12,9 @@ const routes: Routes = [
   {path:'home', component:HomeComponent, },
   {path:'', component:HomeComponent},
   {path:'survey', component:SurveyListComponent},
-  {path:'survey/create', component:SurveyCreateComponent },
-  {path:'users/login', component:LoginComponent},
+  {path:'survey/:id', component:SurveyListComponent},
+  {path:'survey/create', component:SurveyCreateComponent , canActivate : [AuthGuardService]},
+  {path:'users/login', component:LoginComponent , canActivate : [AuthGuardLoginService]},
   {path:'users/register', component:RegisterComponent}
 ];
 
