@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./question-tf.component.css']
 })
 export class QuestionTfComponent {
-
+  queNum : number = 0;
 }

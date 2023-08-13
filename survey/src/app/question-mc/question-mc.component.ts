@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./question-mc.component.css']
 })
 export class QuestionMcComponent {
-
+  queNum : number = 0;
 }
