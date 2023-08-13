@@ -38,11 +38,20 @@ export class SurveyListComponent {
 
   ngOnInit(){
     this.appService.getSurveys().subscribe({
-      next: res => this.surveys = res,
+      next: res => {
+        this.surveys = res;
+        this.surveys.forEach(this.addColRow);
+      },
       error: e => console.log("error")
     })
   }
 
-  getSurveyList() {
+  addColRow(item: any, index: any, arr: any) {
+    arr[index].cols = 1;
+    arr[index].rows = 1;
+    if (!arr[index].thumbnail || arr[index].thumbnail == ""){
+      arr[index].thumbnail = "assets/no-image.jpg";
+    }
+    console.log(arr[index])
   }
 }

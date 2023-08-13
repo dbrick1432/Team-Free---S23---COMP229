@@ -2,7 +2,7 @@
   margin: 20px;
 }
 
-.dashboard-card {
+.dashboard-survey {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -16,6 +16,17 @@
   right: 10px;
 }
 
-.dashboard-card-content {
+.dashboard-survey-content {
   text-align: center;
+  height: 75%;
+}
+
+.dashboard-survey-content img{
+  height: 100%;
+}
+
+.dashboard-survey p {
+  margin-top: .5rem;
+  margin-right: 1rem;
+  text-align: right;
 }

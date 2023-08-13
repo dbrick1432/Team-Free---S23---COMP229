@@ -11,29 +11,14 @@
                         <th class="text-center col-7">Question</th>
                         <th class="text-center col-4">Answer</th>
                     </tr>
-                    <tr class="d-flex">
-                        <td class="text-center col-1">1</td>
-                        <td class="text-center col-7">
-                            <input type="text" name="q1" required>
-                        </td>
-                       <!---- <td class="text-center col-4">
-                            <input type="text" name="a1" required>
-                        </td>-->
-                        
-                            <td>
-                            
-                         <input name="opthelp" tabindex="11" type="radio" value="Excellent">Excellent
-                         <input name="opthelp" tabindex="13" type="radio" value="Good">Good
-                         <input name="opthelp" tabindex="15" type="radio" value="Fair">Fair
-                         <input name="opthelp" tabindex="11" type="radio" value="Poor">Poor</td>
-                        
-                    </tr>
-                    
-                </table>
+                    <ng-container #container></ng-container>
                 
-                <button id="more-question" class="btn btn-outline-success" type="button">add question</button>
-                <button class="btn btn-outline-danger" type="button">remove question</button><br>
+                
+                <button (click)="addMC()" class="btn btn-outline-success" type="button">add MC</button>
+                <button (click)="addTF()" class="btn btn-outline-success" type="button">add TF</button>
+                <button (click)="remveLastQue()" class="btn btn-outline-danger" type="button">remove Last Question</button><br>
                 <button class="btn btn-outline-primary" type="submit">submit</button>
+            </table>
             </form>
             <p id="question_counter" style="visibility: hidden;"> 1 </p>
         </div>
