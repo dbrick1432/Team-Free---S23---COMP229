@@ -11,19 +11,26 @@ export class SurveyCreateComponent {
   @ViewChild('container', {read: ViewContainerRef}) container! : ViewContainerRef;
 
   curQueNum : number = 0;
-
+  question : any = [];
   constructor(){}
 
   addMC() {
     this.curQueNum ++;
     let temp = this.container.createComponent(QuestionMcComponent);
     temp.instance.queNum = this.curQueNum;
+    this.question.push(temp);
   }
 
   addTF() {
     this.curQueNum ++;
     let temp = this.container.createComponent(QuestionTfComponent);
     temp.instance.queNum = this.curQueNum;
+    this.question.push(temp);
+    this.question[0].destroy;
+  }
+
+  remveLastQue() {
+    this.curQueNum--;
   }
 
 }
