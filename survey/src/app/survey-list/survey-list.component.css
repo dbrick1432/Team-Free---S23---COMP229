@@ -26,7 +26,11 @@
 }
 
 .dashboard-survey p {
-  margin-top: .5rem;
-  margin-right: 1rem;
+  margin: .5rem 1rem;
   text-align: right;
+}
+
+.card-bottom {
+  display: flex;
+    justify-content: space-between;
 }

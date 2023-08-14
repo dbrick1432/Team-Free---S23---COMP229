@@ -16,7 +16,10 @@
           <mat-card-content class="dashboard-survey-content">
             <img src="{{survey.thumbnail}}">
           </mat-card-content>
-          <p>{{survey.submitCount}} people have done this!</p>
+          <div class ="card-bottom">
+            <p>Expire : {{survey.expire}}</p>
+            <p>{{survey.submitCount}} people have done this!</p>
+          </div>
         </mat-card>
       </a>
     </mat-grid-tile>

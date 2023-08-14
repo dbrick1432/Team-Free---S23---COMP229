@@ -39,7 +39,6 @@ export class SurveyListComponent {
   ngOnInit(){
     this.appService.getSurveys().subscribe({
       next: res => {
-        console.log(res)
         this.surveys = res;
         this.surveys.forEach(this.addColRow);
       },
@@ -48,6 +47,7 @@ export class SurveyListComponent {
   }
 
   addColRow(item: any, index: any, arr: any) {
+    arr[index].expire= arr[index].expire.substring(0,10)
     arr[index].cols = 1;
     arr[index].rows = 1;
     if (!arr[index].thumbnail || arr[index].thumbnail == ""){
