@@ -22,6 +22,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SurveyIdComponent } from './survey-id/survey-id.component';
 import { QuestionMcComponent } from './question-mc/question-mc.component';
 import { QuestionTfComponent } from './question-tf/question-tf.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +43,9 @@ import { QuestionTfComponent } from './question-tf/question-tf.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
     HttpClientModule,
     AppRoutingModule,
     NgbModule,

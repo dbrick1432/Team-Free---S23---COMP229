@@ -35,4 +35,15 @@ export class AppService {
       return res;
     }));
   }
+
+  createSurvey(survey : object): Observable<any>{
+    return this.http.post('http://localhost:3000/survey/create',{survey}).pipe(map(data => {
+      let res :any = data;
+      if (res.err) {
+        return res;
+      }
+      this.route.navigate(['survey']);
+      return res;
+    }));
+  }
 }

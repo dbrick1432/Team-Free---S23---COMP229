@@ -1,7 +1,7 @@
-<tr class="d-flex">
+<tr [formGroup] = "quesForm" class="d-flex">
     <td class="text-center col-1">{{queNum}}</td>
     <td class="text-center col-7">
-        <input type="text" name="q1" required>
+        <input  formControlName = "question" type="text" name="q{{queNum}}" required>
     </td>
     
     <td>

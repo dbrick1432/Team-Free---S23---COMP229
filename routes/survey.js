@@ -32,4 +32,9 @@ router.get('/create', (req, res, next)=>{
     res.render('createSurvey', {title: 'Create Survey'});
 });
 
+router.post('/create', (req, res, next)=>{
+    console.log('yes')
+    res.json();
+});
+
 module.exports = router;

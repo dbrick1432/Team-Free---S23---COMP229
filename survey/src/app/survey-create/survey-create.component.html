@@ -3,7 +3,22 @@
         <div class="offset-md-1 col-md-10">
             <h1>Create Survey</h1>
             <br>
-            <form action="/game/create" method="POST" >
+            <form [formGroup] = "surveyForm" action="/survey/create" method="POST" >
+                <label> Titile : </label>
+                <input  formControlName = "title" type="text" required> 
+                <br>
+                <label> Thumbnail url : </label>
+                <input  formControlName = "thumbnail" type="text" required> 
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>pick a expiry date</mat-label>
+                    <input formControlName = "expire" matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker">
+                      </mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <br>
                 <table class="table table-bordered table-striped table-hover">
                     <!-- Header Row -->
                     <tr class="d-flex">
@@ -17,7 +32,8 @@
                 <button (click)="addMC()" class="btn btn-outline-success" type="button">add MC</button>
                 <button (click)="addTF()" class="btn btn-outline-success" type="button">add TF</button>
                 <button (click)="remveLastQue()" class="btn btn-outline-danger" type="button">remove Last Question</button><br>
-                <button class="btn btn-outline-primary" type="submit">submit</button>
+                <button (click)="submit()" class="btn btn-outline-danger" type="button">test</button><br>
+                <button (click)="submit()"class="btn btn-outline-primary" >submit</button>
             </table>
             </form>
             <p id="question_counter" style="visibility: hidden;"> 1 </p>
