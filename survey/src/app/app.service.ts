@@ -46,4 +46,14 @@ export class AppService {
       return res;
     }));
   }
+
+  getSurvetById(id : any){
+    return this.http.get('http://localhost:3000/survey/:' + id,).pipe(map(data => {
+      let res :any = data;
+      if (res.err) {
+        return res;
+      }
+      return res;
+    }));
+  }
 }

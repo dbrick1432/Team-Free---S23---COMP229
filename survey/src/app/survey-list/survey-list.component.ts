@@ -53,6 +53,5 @@ export class SurveyListComponent {
     if (!arr[index].thumbnail || arr[index].thumbnail == ""){
       arr[index].thumbnail = "assets/no-image.jpg";
     }
-    console.log(arr[index])
   }
 }

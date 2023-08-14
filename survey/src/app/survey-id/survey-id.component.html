@@ -1,1 +1,20 @@
-<p>survey-id works!</p>
+<div class="row">
+    <div class="offset-md-1 col-md-10">
+        <h1>title</h1>
+        <br>
+        <form [formGroup] = "surveyForm" action="/survey/:id" method="POST" >
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row -->
+                <tr class="d-flex">
+                    <th class="text-center col-1">Q#</th>
+                    <th class="text-center col-7">Question</th>
+                    <th class="text-center col-4">Answer</th>
+                </tr>
+                <ng-container #container></ng-container>
+            <button (click)="submit()"class="btn btn-outline-primary" >submit</button>
+        </table>
+        </form>
+        <p id="question_counter" style="visibility: hidden;"> 1 </p>
+    </div>
+</div>
