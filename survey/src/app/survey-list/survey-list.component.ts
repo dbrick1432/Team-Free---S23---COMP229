@@ -39,6 +39,7 @@ export class SurveyListComponent {
   ngOnInit(){
     this.appService.getSurveys().subscribe({
       next: res => {
+        console.log(res)
         this.surveys = res;
         this.surveys.forEach(this.addColRow);
       },
