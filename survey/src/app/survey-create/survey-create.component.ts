@@ -27,7 +27,6 @@ export class SurveyCreateComponent {
     this.curQueNum ++;
     this.questionQueue.push(this.container.createComponent(QuestionMcComponent));
     this.questionQueue[this.curQueNum -1].instance.queNum = this.curQueNum;
-
   }
 
   addTF() {

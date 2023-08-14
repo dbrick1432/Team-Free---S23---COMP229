@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 // create a model class
 let surveyModel = mongoose.Schema({
     title: String,
-    submitCount: String,
+    submitCount: Number,
     thumbnail: String,
     created:
     {

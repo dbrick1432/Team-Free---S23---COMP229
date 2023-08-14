@@ -6,7 +6,7 @@ let questionTFModel = mongoose.Schema({
     qNumber : Number,
     question : String,
     trueCount : Number,
-    falseCount : String
+    falseCount : Number
 },
 {
     collection: 'questionTF'

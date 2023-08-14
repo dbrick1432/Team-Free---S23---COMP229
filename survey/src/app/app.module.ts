@@ -25,6 +25,8 @@ import { QuestionTfComponent } from './question-tf/question-tf.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
+import { SurveyTFComponent } from './survey-tf/survey-tf.component';
+import { SurveyMCComponent } from './survey-mc/survey-mc.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     RegisterComponent,
     SurveyIdComponent,
     QuestionMcComponent,
-    QuestionTfComponent
+    QuestionTfComponent,
+    SurveyTFComponent,
+    SurveyMCComponent
   ],
   imports: [
     BrowserModule,

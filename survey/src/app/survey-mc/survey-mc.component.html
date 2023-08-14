@@ -1,0 +1,15 @@
+<tr [formGroup] = "quesForm" class="d-flex">
+    <td class="text-center col-1">{{queNum}}</td>
+    <td class="text-center col-7">
+        <p type="text" name="q" required>{{question}}</p>
+    </td>
+    
+    <td>
+            
+        <input formControlName = "mcChoice" tabindex="11" type="radio" value="choice1Count">Excellent
+        <input formControlName = "mcChoice" tabindex="13" type="radio" value="choice2Count">Good
+        <input formControlName = "mcChoice" tabindex="15" type="radio" value="choice3Count">Fair
+        <input formControlName = "mcChoice" tabindex="11" type="radio" value="choice4Count">Poor
+    </td>
+    
+</tr>

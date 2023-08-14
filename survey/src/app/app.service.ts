@@ -48,7 +48,17 @@ export class AppService {
   }
 
   getSurvetById(id : any){
-    return this.http.get('http://localhost:3000/survey/:' + id,).pipe(map(data => {
+    return this.http.get('http://localhost:3000/survey/' + id,).pipe(map(data => {
+      let res :any = data;
+      if (res.err) {
+        return res;
+      }
+      return res;
+    }));
+  }
+
+  submitSurvey(id : any, data : object){
+    return this.http.post('http://localhost:3000/survey/' + id, {data}).pipe(map(data => {
       let res :any = data;
       if (res.err) {
         return res;
